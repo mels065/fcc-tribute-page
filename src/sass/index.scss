@@ -1,0 +1,119 @@
+@import "variables/colors";
+@import "variables/viewports";
+@import "variables/animations";
+
+@import "mixins/diagonal-gradient-background";
+@import "mixins/fade-in";
+
+@import "base/base";
+
+#main {
+  header {
+    @include diagonal-gradient-background($red, $red2);
+    text-align: center;
+    padding: 30px;
+    .title-caption {
+      font-size: 2rem;
+    }
+  }
+  #content {
+    margin: 20px auto;
+    width: 90%;
+    #img-div {
+      background: $gray;
+      border-radius: 10px;
+      margin: 0 auto 20px auto;
+      max-width: 900px;
+      width: 80%;
+      #image {
+        border-radius: 10px;
+        width: 100%;
+      }
+      #img-caption {
+        color: $white;
+        text-align: right;
+        line-height: 1.5;
+        margin-right: 2%;
+        font-style: italic;
+        font-size: 1.1rem
+      }
+    }
+    #tribute-info {
+      & > ul {
+        @include diagonal-gradient-background($red, $red2);
+        color: $white;
+        border: 5px solid $white2;
+        font-size: 1.15rem;
+        padding: 30px 70px;
+        margin: 0 auto;
+        width: 20%;
+        @media screen and (max-width: 500px) {
+          width: 40%;
+        }
+        li {
+          border-bottom: 3px solid $white;
+          font-size: 1.5rem;
+          margin-bottom: 20px;
+        }
+        & > ul li {
+          border-bottom: 1px solid $white;
+          text-align: right;
+          font-size: 1rem;
+          margin-left: 15%;
+          @media screen and (max-width: 700px) {
+            margin-left: 0;
+          }
+        }
+      }
+      #tribute-link {
+        color: $red;
+        display: block;
+        text-decoration: none;
+        font-size: 1.1rem;
+        border-radius: 20px;
+        border: 5px solid $red;
+        padding: 10px 30px;
+        margin: 50px auto;
+        text-align: center;
+        transition: $fade-transition;
+        
+        width: 20%;
+        @media screen and (max-width: $viewport-width-min) {
+          width: 30%;
+        }
+        &:hover {
+          @include fade-in($white, $red);
+        }
+      }
+    }
+  }
+  footer {
+    @include diagonal-gradient-background($red, $red2);
+    padding: 20px;
+    .footer-contents {
+      display: flex;
+      justify-content: space-evenly;
+      .contacts {
+        text-align: center;
+        li {
+          display: inline;
+          .contact-link {
+            color: $white;
+            font-size: 1.2rem;
+            padding: 10px;
+            text-decoration: none;
+            transition: $fade-transition;
+            &:hover {
+              color: $gray;
+              font-size: 1.95rem;
+            }
+          }
+        }
+      }
+      .copyright {
+        color: $white;
+        font-style: italic;
+      }
+    }
+  }
+}

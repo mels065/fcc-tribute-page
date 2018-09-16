@@ -1,0 +1,27 @@
+@import "variables/colors";
+@import "variables/viewports";
+@import "variables/fonts";
+
+@import "functions/strip-unit";
+
+html, body {
+  background: $white;
+  color: $white;
+  font-family: 'Oswald', sans-serif;
+  
+  font-size: $font-size-min;
+  @media (min-width: $viewport-width-min) {
+    font-size: calc(#{$font-size-min} + (#{strip-unit($font-size-max - $font-size-min)}) * ((100vw - #{$viewport-width-min}) / (#{strip-unit($viewport-width-max - $viewport-width-min)})));
+  }
+  @media (min-width: $viewport-width-max) {
+    font-size: $font-size-max;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Spicy Rice', cursive;
+}
+
+h1 {
+  font-size: 7rem;
+}

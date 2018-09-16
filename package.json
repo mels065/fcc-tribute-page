@@ -1,0 +1,26 @@
+{
+  "name": "tribute",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "browser-refresh": "^1.7.3",
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-bulk-import": "^1.0.1"
+  }
+}

@@ -1,0 +1,4 @@
+@mixin fade-in($color, $bg-color) {
+  color: $color;
+  background: $bg-color;
+}
