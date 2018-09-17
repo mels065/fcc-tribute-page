@@ -8,15 +8,20 @@
 @import "base/base";
 
 #main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
   header {
     @include diagonal-gradient-background($red, $red2);
+    //flex: 1 0 auto;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     .title-caption {
       font-size: 2rem;
     }
   }
   #content {
+    flex: 1 0 auto;
     margin: 20px auto;
     width: 90%;
     #img-div {
@@ -81,7 +86,7 @@
         
         width: 20%;
         @media screen and (max-width: $viewport-width-min) {
-          width: 30%;
+          width: 40%;
         }
         &:hover {
           @include fade-in($white, $red);
@@ -91,6 +96,7 @@
   }
   footer {
     @include diagonal-gradient-background($red, $red2);
+    flex-shrink: 0;
     padding: 20px;
     .footer-contents {
       display: flex;
