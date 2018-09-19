@@ -1,6 +1,7 @@
 @import "variables/colors";
 @import "variables/viewports";
 @import "variables/animations";
+@import "variables/units";
 
 @import "mixins/diagonal-gradient-background";
 @import "mixins/fade-in";
@@ -31,7 +32,7 @@
       max-width: 900px;
       width: 80%;
       #image {
-        border-radius: 10px;
+        border-radius: $border-radius-px;
         display: block;
         max-width: 900px;
         width: 100%;
@@ -49,7 +50,7 @@
       & > ul {
         @include diagonal-gradient-background($red, $red2);
         color: $white;
-        border: 5px solid $white2;
+        border-radius: $border-radius-px;
         font-size: 1.15rem;
         padding: 30px 70px;
         margin: 0 auto;
@@ -59,13 +60,13 @@
         }
         li {
           border-bottom: 3px solid $white;
-          font-size: 1.5rem;
+          font-size: 2rem;
           margin-bottom: 20px;
         }
         & > ul li {
           border-bottom: 1px solid $white;
           text-align: right;
-          font-size: 1rem;
+          font-size: 1.5rem;
           margin-left: 15%;
           @media screen and (max-width: 700px) {
             margin-left: 0;
